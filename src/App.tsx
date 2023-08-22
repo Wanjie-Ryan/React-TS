@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-
+import InputComponent from './components/inputfield'
 
 function App (){
 
@@ -11,6 +11,8 @@ function App (){
       <div className='app'>
 
         <span className="heading">Wanjiefy</span>
+
+        <InputComponent/>
 
       </div>
     
