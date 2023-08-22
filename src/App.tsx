@@ -1,34 +1,23 @@
 import React from 'react'
+import './App.css'
 
 
-let name:string
-let age:number
-let hobbies:string[] 
-let role:[number, string]  //the role is a TUPLE and it will hold both a number and a string in one array 
+function App (){
 
-name = 'Ricky Marshall'
-age = 23
+  return(
 
-type person ={
+    <>
 
-  id:number,
-  firstName?:string
-}
+      <div className='app'>
 
-let Person:person ={
+        <span className="heading">Wanjiefy</span>
 
-  id:1,
-  // firstName:'Ricky',
-}
-
-let results:string | number //this is union, and the the variable results can hold data of type string and data of type number
-
-results = 3
+      </div>
+    
+    
+    </>
 
 
-function App() {
-  return (
-    <div>App</div>
   )
 }
 
