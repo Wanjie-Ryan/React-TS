@@ -7,7 +7,7 @@ function App (){
 
   const [todo, setTodo ] = useState<string>('')
   const [todos, setTodos] = useState<Todo[]>([])
-  // console.log(todo)
+  // console.log(todos)
 
   const handleAdd = (e:React.FormEvent )=>{
 
@@ -16,6 +16,7 @@ function App (){
     if(todo){
 
       setTodos([...todos, {id:Date.now(), todo:todo, isDone:false}])
+      setTodo('')
     }
 
   }
@@ -29,6 +30,15 @@ function App (){
         <span className="heading">Wanjiefy</span>
 
         <InputComponent todo={todo} setTodo={setTodo} handleAdd ={handleAdd}/>
+
+        {todos.map((item)=>(
+          <>
+            <p>{item.id}</p>
+            <p>{item.todo}</p>
+            <p>{item.isDone}</p>
+          </>
+
+        ))}
 
       </div>
     
