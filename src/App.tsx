@@ -1,8 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './App.css'
 import InputComponent from './components/inputfield'
+import {Todo} from './components/model'
 
 function App (){
+
+  const [todo, setTodo ] = useState<string>('')
+  const [todos, setTodos] = useState<Todo[]>([])
+  // console.log(todo)
+
+  const handleAdd = ( )=>{
+
+  }
 
   return(
 
@@ -12,7 +21,7 @@ function App (){
 
         <span className="heading">Wanjiefy</span>
 
-        <InputComponent/>
+        <InputComponent todo={todo} setTodo={setTodo} handleAdd ={handleAdd}/>
 
       </div>
     
